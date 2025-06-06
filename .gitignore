@@ -66,3 +66,5 @@ datasets
 
 # Tests
 tests/
+
+**/isaaclab_assets/data/*
