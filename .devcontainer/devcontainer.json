@@ -1,0 +1,11 @@
+{
+    "name": "Isaac Lab 2-1-0 Docker",
+    "dockerComposeFile": [
+      "../docker/docker-compose.yaml"
+    ],
+    "service": "isaac-lab-base-2.1.0",
+    "workspaceFolder": "/workspace/isaaclab",
+    "shutdownAction": "stopCompose",
+    "extensions": [
+    ]
+  }

@@ -79,8 +79,8 @@ x-default-isaac-lab-deploy: &default-isaac-lab-deploy
 
 services:
   # This service is the base Isaac Lab image
-  isaac-lab-base:
-    profiles: [ "base" ]
+  isaac-lab-base-2.1.0:
+    # profiles: [ "base" ]
     env_file: .env.base
     build:
       context: ../
