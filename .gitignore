@@ -68,4 +68,4 @@ datasets
 tests/
 
 # Docker history
-.isaac-lab-docker-history
+# .isaac-lab-docker-history
