@@ -2,6 +2,13 @@
 
 ---
 
+This repo also contains devcontainer functionality! There are a few setups steps involved to use gui's through a devcontainer. For instructions, follow [this link](https://github.com/2b-t/docker-for-robotics/blob/main/doc/Gui.md). Once you build and open the devcontainer, everything should be installed and ready! You can check this by trying to train a policy for a quadruped using the following command:
+```
+./isaaclab.sh -p scripts/reinforcement_learning/rsl_rl/train.py --task=Isaac-Velocity-Rough-Anymal-C-v0
+```
+
+Below is all the readme stuff from the original IsaacLab repo.
+
 # Isaac Lab
 
 [![IsaacSim](https://img.shields.io/badge/IsaacSim-4.5.0-silver.svg)](https://docs.isaacsim.omniverse.nvidia.com/latest/index.html)
