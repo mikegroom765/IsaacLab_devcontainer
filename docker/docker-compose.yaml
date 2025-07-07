@@ -65,7 +65,7 @@ x-default-isaac-lab-volumes: &default-isaac-lab-volumes
     source: .isaac-lab-docker-history
     target: ${DOCKER_USER_HOME}/.bash_history
   - type: bind
-    source: ../../Projects
+    source: ../Projects
     target: ${DOCKER_ISAACLAB_PATH}/Projects
 
 x-default-isaac-lab-environment: &default-isaac-lab-environment
