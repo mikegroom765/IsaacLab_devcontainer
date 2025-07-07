@@ -91,6 +91,9 @@ RUN --mount=type=cache,target=${DOCKER_USER_HOME}/.cache/pip \
 # HACK: Remove install of quadprog dependency
 RUN ${ISAACLAB_PATH}/isaaclab.sh -p -m pip uninstall -y quadprog
 
+# Downgrade to numpy 1.26.4 to avoid crashes
+RUN pip install --upgrade numpy==1.26.4
+
 # aliasing isaaclab.sh and python for convenience
 RUN echo "export ISAACLAB_PATH=${ISAACLAB_PATH}" >> ${HOME}/.bashrc && \
     echo "alias isaaclab=${ISAACLAB_PATH}/isaaclab.sh" >> ${HOME}/.bashrc && \
