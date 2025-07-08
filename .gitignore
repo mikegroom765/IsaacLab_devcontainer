@@ -69,5 +69,3 @@ tests/
 
 # Docker history
 # .isaac-lab-docker-history
-Projects/*
-!Projects/.gitkeep
