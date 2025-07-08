@@ -1,7 +1,7 @@
 # ignore .git related folders
 .git/
 .github/
-.gitignore
+# .gitignore
 # ignore docs
 docs/
 # copy in licenses folder to the container
