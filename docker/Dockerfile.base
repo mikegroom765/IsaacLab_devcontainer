@@ -16,7 +16,7 @@ ENV ISAACSIM_VERSION=${ISAACSIM_VERSION_ARG}
 SHELL ["/bin/bash", "-c"]
 
 # Adds labels to the Dockerfile
-LABEL version="2.1.1"
+LABEL version=${ISAACSIM_VERSION}
 LABEL description="Dockerfile for building and running the Isaac Lab framework inside Isaac Sim container image."
 
 # Arguments
@@ -85,6 +85,12 @@ RUN touch /bin/nvidia-smi && \
     touch /etc/localtime && \
     mkdir -p /var/run/nvidia-persistenced && \
     touch /var/run/nvidia-persistenced/socket
+
+# Use the Python 3.11–compatible rl_games fork (overrides PyPI package)
+RUN ${ISAACLAB_PATH}/isaaclab.sh -p -m pip uninstall -y rl-games && \
+    ${ISAACLAB_PATH}/isaaclab.sh -p -m pip install --no-cache-dir \
+        "git+https://github.com/isaac-sim/rl_games.git@python3.11"
+
 
 # installing Isaac Lab dependencies
 # use pip caching to avoid reinstalling large packages
