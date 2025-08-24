@@ -57,6 +57,9 @@ x-default-isaac-lab-volumes: &default-isaac-lab-volumes
   - type: volume
     source: isaac-lab-data
     target: ${DOCKER_ISAACLAB_PATH}/data_storage
+  - type: bind
+    source: ../../Projects
+    target: ${DOCKER_ISAACLAB_PATH}/../Projects
 
 x-default-isaac-lab-environment: &default-isaac-lab-environment
   - ISAACSIM_PATH=${DOCKER_ISAACLAB_PATH}/_isaac_sim
