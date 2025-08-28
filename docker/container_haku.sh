@@ -201,7 +201,7 @@ case $mode in
         # in case we are building a profile which depends upon
         docker compose --file docker-compose-haku.yaml --env-file .env.base build michael-isaac-lab-2.2.0-base-yin
         docker compose --file docker-compose-haku.yaml --env-file .env.base build michael-isaac-lab-2.2.0-base-yang
-        docker compose $add_yamls $add_profiles $add_envs up --detach --build
+        docker compose $add_yamls $add_profiles $add_envs up --detach 
         popd > /dev/null 2>&1
         ;;
     enter)
